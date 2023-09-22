@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Movie Watchlist</title>
+{% endblock %}
+
+{% block body %}
+<div class="mname">
+    <h1 style="text-align: center">Update Movie</h1>
+
+    <div class="form" stlye="text-align: center">
+        <form action="/update/{{movie.id}}" method="POST">
+            <input type="text" name="mname" id="mname" value="{{movie.mname}}">
+            <input type="submit" value="Update">
+        </form>
+    </div>
+</div>
+{% endblock %}
